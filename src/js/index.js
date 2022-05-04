@@ -1,11 +1,10 @@
-
+'use stirct'
 
 const submit = document.querySelector('.sub')
 const formInputs = document.querySelectorAll('.input')
 const emailInput = document.querySelector('.email_input')
 const ageInput = document.querySelector('.age_input')
-
-let radio = document.getElementsByName('gender')
+const radio = document.getElementsByName('gender')
 
 
 function checkField(event){
@@ -13,12 +12,10 @@ function checkField(event){
 
     event.preventDefault();
 
-    let emailVal = emailInput.value
-    let ageVal = ageInput.value
+    const emailVal = emailInput.value
+    const ageVal = ageInput.value
     
-
-
-    emptyInputs = Array.from(formInputs).filter(input => input.value === '')
+    const emptyInputs = Array.from(formInputs).filter(input => input.value === '')
 
 
     formInputs.forEach((input) => {
@@ -60,8 +57,8 @@ function checkField(event){
 
 
 function validateEmail(email){
-    let regx =  /^[\w]+?.+\@[a-z]{3,8}\.[a-z]{2,5}$/i
-    return regx.test(String(email).toLowerCase())
+    const regx =  /^\w+\.?\w+@[a-z]{3,8}\.[a-z]{2,5}$/i
+    return regx.test(String(email))
 }
 
 
@@ -75,11 +72,15 @@ class User{
         this.gender = gender
     }
 }
+
+
 const obj = new User()
 
 
 
 function collectProps(){
+
+    let data
 
     for(let i = 0; i < radio.length; i++){
         if (radio[i].checked) 
