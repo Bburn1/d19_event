@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(184, 235, 231);
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* Контейнер */
+
+.container{
+    width: 800px;
+    height: 500px;
+
+
+    
+
+}
+input{
+    margin: 10px 10px;
+    padding: 15px 15px;
+}
+
+button.sub{
+    color: green;
+}
+
+button.res{
+    color: red;
+}
+
+button{
+    width: 120px;
+    height: 120px;
+}
+
+input.error{
+    border-color: red;
+}
