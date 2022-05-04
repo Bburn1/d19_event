@@ -77,7 +77,6 @@ class User{
 const obj = new User()
 
 
-
 function collectProps(){
 
     let data
@@ -89,16 +88,13 @@ function collectProps(){
         }
     }
 
-
-
     const inputCollection = Array.from(document.getElementsByClassName('form_input'));
-
 
     inputCollection.forEach((elem) =>{
         obj[elem.name] = elem.value 
         obj.gender = data
     })
-        
+    
     localStorage.setItem(`${obj.lName}`,JSON.stringify(obj))
 
     document.getElementById('form').reset()
