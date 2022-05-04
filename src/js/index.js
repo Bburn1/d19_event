@@ -93,14 +93,12 @@ function collectProps(){
 
     const inputCollection = Array.from(document.getElementsByClassName('form_input'));
 
-    console.log(inputCollection);
 
     inputCollection.forEach((elem) =>{
         obj[elem.name] = elem.value 
         obj.gender = data
     })
         
-        console.log(obj);
     localStorage.setItem(`${obj.lName}`,JSON.stringify(obj))
 
     document.getElementById('form').reset()
